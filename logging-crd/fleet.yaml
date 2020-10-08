@@ -1,4 +1,6 @@
 
-namespace: rancher-logging
+defaultNamespace: rancher-logging
 helm:
-  chart: https://github.com/rancher/charts/blob/dev-v2.5/assets/rancher-logging/rancher-logging-crd-3.6.000.tgz
+  releaseName: rancher-logging-crd
+  repo: https://charts.rancher.io
+  chart: rancher-logging-crd
