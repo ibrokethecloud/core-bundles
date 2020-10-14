@@ -3,3 +3,5 @@ helm:
   releaseName: rancher-cis-benchmark
   repo: https://charts.rancher.io
   chart: rancher-cis-benchmark
+kustomize:
+  dir: ./overlays  
