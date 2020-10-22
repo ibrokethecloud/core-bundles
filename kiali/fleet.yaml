@@ -1,0 +1,5 @@
+defaultNamespace: istio-system
+helm:
+  releaseName: rancher-kiali-server-crd
+  repo: https://charts.rancher.io
+  chart: rancher-kiali-server-crd
