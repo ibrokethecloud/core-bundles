@@ -4,3 +4,16 @@ helm:
   repo: https://charts.rancher.io
   chart: longhorn
   releaseName: longhorn
+diff:
+  comparePatches:
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    operations:
+    - {"op":"remove", "path":"/spec/hostIPC"}
+    - {"op":"remove", "path":"/spec/hostNetwork"} 
+  - apiVersion: v1
+    kind: Service
+    name: longhorn-frontend
+    namespace: longhorn-system
+    operations:
+    - {"op":"remove", "path":"/spec/ports/0"}   
