@@ -9,6 +9,11 @@ helm:
         - name: "loki"
           type: "loki"
           url: "http://loki.loki.svc:3100"
+    prometheusOperator:
+      prometheusSpec:
+        resources:
+          requests:
+            cpu: 250m
 diff:
   comparePatches:
   - apiVersion: admissionregistration.k8s.io/v1beta1
