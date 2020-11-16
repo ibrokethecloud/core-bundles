@@ -8,3 +8,16 @@ targetCustomizations:
   - name: patch
     kustomize:
       dir: patch
+diff:
+  comparePatches:
+  - apiVersion: logging.banzaicloud.io/v1beta1
+    kind: Logging
+    name: rancher-logging
+    operations:
+    - op: add
+      path: /spec/fluentbit/resources/requests/cpu
+      value: 100m
+    - op: add
+      path: /spec/fluentd/resources/requests/cpu
+      value: 100m
+
