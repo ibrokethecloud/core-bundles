@@ -27,3 +27,5 @@ helm:
   chart: rancher-gatekeeper
   releaseName: rancher-gatekeeper
   repo: https://charts.rancher.io
+  values:
+    replicas: 1
