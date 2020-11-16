@@ -3,42 +3,11 @@ kind: Logging
 metadata:
   name: rancher-logging
 spec:
-  controlNamespace: rancher-logging
   fluentbit:
-    image:
-      repository: rancher/fluent-fluent-bit
-      tag: 1.5.4
     resources:
       requests:
         cpu: 100m    
-    nodeSelector:
-      kubernetes.io/os: linux
-    tolerations:
-    - effect: NoSchedule
-      key: cattle.io/os
-      operator: Equal
-      value: linux
-    - effect: NoSchedule
-      key: node-role.kubernetes.io/controlplane
-      value: "true"
-    - effect: NoExecute
-      key: node-role.kubernetes.io/etcd
-      value: "true"
   fluentd:
-    configReloaderImage:
-      repository: rancher/jimmidyson-configmap-reload
-      tag: v0.2.2
-    disablePvc: true
     resources:
       requests:
         cpu: 100m
-    image:
-      repository: rancher/banzaicloud-fluentd
-      tag: v1.11.2-alpine-2
-    nodeSelector:
-      kubernetes.io/os: linux
-    tolerations:
-    - effect: NoSchedule
-      key: cattle.io/os
-      operator: Equal
-      value: linux
