@@ -29,3 +29,6 @@ helm:
   repo: https://charts.rancher.io
   values:
     replicas: 1
+    resources:
+      requests:
+        cpu: 10m
