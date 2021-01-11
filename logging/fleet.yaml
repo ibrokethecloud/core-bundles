@@ -4,3 +4,11 @@ helm:
   repo: https://charts.rancher.io
   chart: rancher-logging
   releaseName: rancher-logging
+diff:
+  comparePatches:
+  - apiVersion: logging.banzaicloud.io/v1beta1
+    kind: Logging
+    name: rancher-logging
+    operations:
+    - {"op": "add", "path": "/spec/fluentbit", "value": '{resources":{"requests":{"cpu":"100m"}}}'}
+    - {"op": "add", "path": "/spec/fluentd", "value": '{resources":{"requests":{"cpu":"100m"}}}'}

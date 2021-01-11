@@ -3,3 +3,13 @@ helm:
   releaseName: rancher-monitoring-crd
   chart: rancher-monitoring-crd
   repo: https://charts.rancher.io
+diff:
+  comparePatches:
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    operations:
+    - {"op":"remove", "path":"/spec/hostIPC"}
+    - {"op":"remove", "path":"/spec/hostNetwork"}
+    - {"op":"remove", "path":"/spec/hostPID"}
+    - {"op":"remove", "path":"/spec/privileged"}
+    - {"op":"remove", "path":"/spec/readOnlyRootFilesystem"}

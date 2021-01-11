@@ -13,7 +13,7 @@ helm:
       prometheusSpec:
         resources:
           requests:
-            cpu: 250m
+            cpu: 10m
 diff:
   comparePatches:
   - apiVersion: admissionregistration.k8s.io/v1beta1
