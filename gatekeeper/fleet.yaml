@@ -19,10 +19,7 @@ diff:
     kind: ValidatingWebhookConfiguration
     name: gatekeeper-validating-webhook-configuration
     operations:
-    - {"op": "remove", "path":"/webhooks/0/clientConfig/caBundle"}
-    - {"op": "remove", "path":"/webhooks/0/rules"}
-    - {"op": "remove", "path":"/webhooks/1/clientConfig/caBundle"}
-    - {"op": "remove", "path":"/webhooks/1/rules"}
+    - {"op": "remove", "path":"/webhooks"}
 helm:
   chart: rancher-gatekeeper
   releaseName: rancher-gatekeeper
