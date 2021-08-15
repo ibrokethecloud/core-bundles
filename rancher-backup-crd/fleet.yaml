@@ -3,3 +3,4 @@ helm:
   releaseName: rancher-backup-crd
   repo: https://charts.rancher.io
   chart: rancher-backup-crd
+  version: 1.0.400
