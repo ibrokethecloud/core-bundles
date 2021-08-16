@@ -3,3 +3,4 @@ helm:
   releaseName: rancher-kiali-server-crd
   repo: https://charts.rancher.io
   chart: rancher-kiali-server-crd
+  version: 1.32.100

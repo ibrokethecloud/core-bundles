@@ -4,7 +4,7 @@ helm:
   repo: https://charts.rancher.io
   chart: rancher-logging
   releaseName: rancher-logging
-  version: 3.8.201
+  version: 3.9.400
 diff:
   comparePatches:
   - apiVersion: logging.banzaicloud.io/v1beta1

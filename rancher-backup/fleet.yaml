@@ -3,6 +3,7 @@ helm:
   releaseName: rancher-backup
   repo: https://charts.rancher.io
   chart: rancher-backup
+  version: 1.0.400
   values:
     persistence:
       enabled: true

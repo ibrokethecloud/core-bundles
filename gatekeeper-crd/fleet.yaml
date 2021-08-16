@@ -3,7 +3,7 @@ helm:
   releaseName: rancher-gatekeeper-crd
   repo: https://charts.rancher.io
   chart: rancher-gatekeeper-crd
-  version: 3.2.101
+  version: 3.3.001
 diff:
   comparePatches:
   - apiVersion: policy/v1beta1
